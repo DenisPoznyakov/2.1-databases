@@ -23,4 +23,7 @@ urlpatterns = [
     path('', phones.views.index),
     path('catalog/', phones.views.show_catalog, name='catalog'),
     path('catalog/<slug:slug>/', phones.views.show_product, name='phone'),
+    path('catalog?sort=name', phones.views.sort_name),
+    path('catalog/?sort=min_price', phones.views.sort_min_price),
+    path('catalog/?sort=max_price', phones.views.sort_max_price),
 ]
